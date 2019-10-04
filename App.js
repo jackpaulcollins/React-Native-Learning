@@ -5,11 +5,10 @@ export default function App() {
   const [outputText, setOutputText] = useState('Checkout my app')
 
   function changeText(){
-    const ogText = outputText;
-    if (outputText === ogText) {
+    if (outputText == 'Checkout my app') {
       setOutputText('New text')
     } else {
-      setOutputText(ogText)
+      setOutputText('Checkout my app')
     }
   }
   
