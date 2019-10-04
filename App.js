@@ -5,8 +5,14 @@ export default function App() {
   const [outputText, setOutputText] = useState('Checkout my app')
 
   function changeText(){
-    setOutputText('New text')
+    const ogText = outputText;
+    if (outputText === ogText) {
+      setOutputText('New text')
+    } else {
+      setOutputText(ogText)
+    }
   }
+  
   return (
     <View style={styles.container}>
       <Text>{ outputText }</Text>
