@@ -1,10 +1,16 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
+  const [outputText, setOutputText] = useState('Checkout my app')
+
+  function changeText(){
+    setOutputText('New text')
+  }
   return (
     <View style={styles.container}>
-      <Text>Checkout my MF app</Text>
+      <Text>{ outputText }</Text>
+      <Button title="click me" onPress={changeText} />
     </View>
   );
 }
